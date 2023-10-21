@@ -1,0 +1,25 @@
+service: express-api
+  
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: us-east-1
+  environment:
+    YOUTUBE_API_KEY: ${env:YOUTUBE_API_KEY}
+
+functions:
+  app:
+    handler: src/lambda.handler
+    events:
+      - http: ANY {proxy+}
+      - http: ANY /
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+
+custom:  
+  dotenv:
+    path: ./src.env  

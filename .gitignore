@@ -30,7 +30,8 @@ node_modules
 npm-debug.log
 
 .DS_Store
-
+.serverless
+node_modules
 .env
 lib-cov
 *.seed

@@ -1,4 +1,3 @@
-// index.js
 const express = require('express');
 const router = require('./routes');
 
@@ -15,3 +14,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+module.exports = app; 

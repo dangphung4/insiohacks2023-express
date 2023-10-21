@@ -2,6 +2,10 @@ const axios = require('axios');
 require('dotenv').config();
 
 const apiKey = process.env.YOUTUBE_API_KEY;
+console.log(process.env.YOUTUBE_API_KEY);
+console.log(process.env.YOUTUBE_API_KEY);
+console.log(process.env.YOUTUBE_API_KEY);
+console.log(process.env.YOUTUBE_API_KEY);
 
 async function getPlaylist(playlistId) {
   try {
