@@ -1,10 +1,16 @@
+// index.js
 const express = require('express');
+const router = require('./routes');
+
 const app = express();
-const PORT = 3001;  // You can choose another port if 3001 is already in use
+const PORT = 3000;
+
+app.use('/api', router);
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+  res.send('Server started')
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
